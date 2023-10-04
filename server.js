@@ -1,17 +1,21 @@
 const express = require('express');
+const next = require('next');
 const path = require('path');
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-// Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'build')));
+app.prepare().then(() => {
+  const server = express();
 
-// Handles any requests that don't match the ones above
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+  server.get('*', (req, res) => {
+    return handle(req, res);
+  });
 
-app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
+  const PORT = process.env.PORT || 3000;
+  server.listen(PORT, err => {
+    if (err) throw err;
+    console.log(`> Ready on http://localhost:${PORT}`);
+  });
 });
