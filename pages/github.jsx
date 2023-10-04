@@ -39,7 +39,7 @@ const GithubPage = ({ repos, user }) => {
       </div>
       <div className={styles.contributions}>
         <GitHubCalendar
-          username={process.env.NEXT_PUBLIC_GITHUB_USERNAME}
+          username='scottwatt'
           theme={theme}
           hideColorLegend
           hideMonthLabels
@@ -51,20 +51,20 @@ const GithubPage = ({ repos, user }) => {
 
 export async function getStaticProps() {
   const userRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
+    `https://api.github.com/users/scottwatt`,
     {
       headers: {
-        Authorization: `token ${process.env.GITHUB_API_KEY}`,
+        Authorization: `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`,
       },
     }
   );
   const user = await userRes.json();
 
   const repoRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?per_page=100`,
+    `https://api.github.com/users/scottwatt/repos?per_page=100`,
     {
       headers: {
-        Authorization: `token ${process.env.GITHUB_API_KEY}`,
+        Authorization: `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`,
       },
     }
   );
