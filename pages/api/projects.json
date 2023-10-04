@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Blackjack",
+    "image": "https://imgur.com/SrLwupp.png",
+    "description": "A platform that allows you to play blackjack against the dealer!",
+    "tags": ["javascript", "html", "css-modules"],
+    "source_code": "https://github.com/scottwatt/blackjack",
+    "demo": "https://scottwatt.github.io/blackjack//"
+  },
+  {
+    "id": 2,
+    "name": "Task Manager",
+    "image": "https://imgur.com/hnsfbQN.jpg",
+    "description": "Sign up or log in and create tasks on the calendar to keep track of. Press toggle tasks to view all tasks created and it sorts the tasks based off priority and time remaining! When the task is complete or the time has elapsed the task's ending time, the task will move to a finished task section. All data is stored in a database and can be edited and deleted.",
+    "tags": ["react", "node", "mongodb", "redux", "express", "bcrypt"],
+    "source_code": "https://github.com/scottwatt/Task_Manager",
+    "demo": "https://task-manager-scott.herokuapp.com/"
+  },
+  {
+    "id": 3,
+    "name": "AGI Website",
+    "image": "https://imgur.com/8FFqaX8.png",
+    "description": "A company website!",
+    "tags": [ "node", "bootstrap", "sass", "php", "javascript", "html", "css-modules"],
+    "source_code": "https://github.com/scottwatt/Agi",
+    "demo": "https://scottwatt.github.io/Agi/"
+  },
+  {
+    "id": 4,
+    "name": "Movie Search",
+    "image": "https://imgur.com/Nn2dI5C.jpg",
+    "description": "A themeable and developer-centric portfolio based on the VSCode",
+    "tags": ["next", "css-modules"],
+    "source_code": "https://github.com/scottwatt/Movie_Search",
+    "demo": "https://scottwatt.github.io/Movie_Search/"
+  }
+]

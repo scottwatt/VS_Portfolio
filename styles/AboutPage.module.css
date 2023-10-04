@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .container > div {
+    flex: 1;
+    border-right: 1px solid var(--accent-color);
+  }
+  
+  .container > div:last-child {
+    border-right: none;
+  }
+  
+  .heading {
+    margin-bottom: 1.5rem;
+  }
+  
+  .resumeButton {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .container {
+      flex-direction: column;
+    }
+    .container > div {
+      border-right: none;
+      margin-bottom: 2.5rem;
+    }
+  }
+  
