@@ -9,6 +9,15 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
 
+  // Enforce HTTPS
+  server.use((req, res, next) => {
+    if (req.headers['x-forwarded-proto'] !== 'https' && !dev) {
+      return res.redirect(`https://${req.headers.host}${req.url}`);
+    } else {
+      return next();
+    }
+  });
+
   server.get('*', (req, res) => {
     return handle(req, res);
   });
