@@ -19,7 +19,7 @@ const contactItems = [
   {
     social: 'linkedin',
     link: 'scottwattenbarger',
-    href: 'https://www.linkedin.com/in/https://www.linkedin.com/in/scott-wattenbarger-057652123//',
+    href: 'https://www.linkedin.com/in/scott-wattenbarger-057652123//',
   },
 
   {
