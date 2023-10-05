@@ -3,8 +3,8 @@ import styles from '../styles/ContactCode.module.css';
 const contactItems = [
   {
     social: 'website',
-    link: 'ScottWattenbarger.me',
-    href: 'https://.me',
+    link: 'ScottWattenbarger.com',
+    href: 'https://www.scottwattenbarger.com',
   },
   {
     social: 'email',
